@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slide by JavaScript</title>
+    <style>
+        #slide{
+            width: 800px;
+            height: 220px;
+            margin: 0 auto;
+        }
+        #viewport{
+            overflow: hidden;
+            position: relative;
+
+        }
+        #control{
+            position: absolute;
+            bottom: 0px;
+            height: 0px;
+            width:100%;
+            text-align: center;
+        }
+        #changeto{
+            position: absolute;
+            top:0;
+            left:0;
+            height: 0;
+            width: 100%;
+        }
+
+        #changeto a{
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 20px;
+            background-color: white;
+            opacity: .5;
+        }
+        #changeto a:hover{opacity: 1;}
+        #changeto a:first-child{left: 0;}
+        #changeto a:last-child{right:0; }
+        span{
+            display: inline-block;
+            border: 1px solid #aaaaaa;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            margin: -20px 5px 20px;
+        }
+        span.cur{background-color: #ffffff;}
+        ul{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+        }
+        li{
+            list-style: none;
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+            background-color: white;
+        }
+        li a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            color: #000000;
+        }
+    </style>
+    <script src="js/slider-by-JS.js"></script>
+</head>
+<body>
+<div id="slide"></div>
+<script>
+    data = {
+        // 'text': 'URL'
+        'text1': '111111',
+        'text2': '222222',
+        'text3': '333333',
+        'text4': '444444',
+        'text5': '555555',
+        'text6': '666666'
+    };
+</script>
+</body>
+</html>
