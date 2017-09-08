@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery操作DOM生成nav-list</title>
+    <style >
+        ul{line-height: 30px;}
+        li{
+            display: inline-block;
+            list-style: none;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    </style>
+    <script src="js/jquery-1.8.1.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script>
+  data= {
+      'html': '/html/index.html',
+      'CSS': '/css/index.html',
+      'JavaScript': '/js/index.html'
+    };
+
+$().ready(
+    function () {
+        if(data){
+            $('#app').append('<ul></ul>');
+            $.each(data,function (text,url) {
+                $('#app > ul').append('<li><a href="'+ url +'">' +text + '</a></li>');
+                console.log('1');
+            });
+        }
+    }
+
+);
+
+    //app.appendChild(nav);
+
+</script>
+</body>
+</html>
